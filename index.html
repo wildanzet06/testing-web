@@ -788,11 +788,6 @@ header{
 }
 
 </style>
-
-<style>
-/* ===== APLIKASI RETAIL DETAIL MODAL ===== */
-.retail-modal{position:fixed;inset:0;background:rgba(2,6,23,.72);backdrop-filter:blur(7px);z-index:9999;display:none;align-items:center;justify-content:center;padding:22px}.retail-modal.show{display:flex}.retail-dialog{width:min(1040px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.28);position:relative}.retail-close{position:absolute;right:18px;top:18px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#0f172a;font-size:25px;line-height:1;cursor:pointer;box-shadow:0 8px 25px rgba(15,23,42,.12);z-index:2}.retail-detail-hero{padding:58px 55px 48px;background:linear-gradient(135deg,#f0fdf4,#fff);display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}.retail-detail-hero h2{font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-2px;margin:8px 0 16px;color:#0f172a}.retail-detail-hero h2 span{color:#16a34a}.retail-detail-hero p{color:#64748b;font-size:16px;max-width:560px}.retail-badge{display:inline-flex;background:#dcfce7;color:#15803d;padding:7px 11px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.5px}.retail-price{display:flex;align-items:end;gap:10px;margin:22px 0}.retail-price strong{font-size:32px;color:#0f172a}.retail-price del{font-size:14px;color:#94a3b8}.retail-preview{background:#0f172a;border-radius:17px;padding:11px;box-shadow:0 20px 45px rgba(15,23,42,.18)}.retail-preview-top{height:30px;display:flex;gap:5px;align-items:center;padding:0 5px}.retail-preview-top i{width:7px;height:7px;border-radius:50%;background:#64748b}.retail-preview-body{background:#fff;border-radius:10px;padding:17px}.retail-preview-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}.retail-preview-title b{font-size:13px}.retail-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.retail-stat{padding:11px;background:#f8fafc;border-radius:9px}.retail-stat small{display:block;color:#94a3b8;font-size:9px}.retail-stat b{font-size:13px;display:block;margin-top:3px}.retail-bars{height:105px;margin-top:9px;border:1px solid #e2e8f0;border-radius:9px;display:flex;align-items:end;gap:8px;padding:12px}.retail-bars i{display:block;flex:1;background:#86efac;border-radius:4px 4px 0 0}.retail-detail-content{padding:48px 55px}.retail-detail-content h3{font-size:27px;margin:0 0 9px;color:#0f172a}.retail-detail-content>p{color:#64748b;margin-top:0}.retail-feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:25px}.retail-feature{border:1px solid #e2e8f0;border-radius:14px;padding:20px}.retail-feature .ri{font-size:25px}.retail-feature h4{margin:11px 0 5px;font-size:15px}.retail-feature p{font-size:12.5px;color:#64748b;margin:0}.retail-module{margin-top:40px;background:#f8fafc;border-radius:17px;padding:25px}.retail-module h3{font-size:22px}.retail-checks{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0 0;padding:0;list-style:none}.retail-checks li{background:#fff;border:1px solid #e2e8f0;padding:13px 15px;border-radius:10px;font-size:13px}.retail-checks li:before{content:'✓';color:#16a34a;font-weight:800;margin-right:9px}.retail-detail-footer{padding:24px 55px;background:#0f172a;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px}.retail-detail-footer p{margin:0;color:#cbd5e1;font-size:13px}.retail-detail-footer .btn{border:0}@media(max-width:760px){.retail-detail-hero,.retail-detail-content{padding:38px 24px}.retail-detail-hero{grid-template-columns:1fr;gap:25px}.retail-feature-grid{grid-template-columns:1fr}.retail-checks{grid-template-columns:1fr}.retail-detail-footer{padding:22px 24px;flex-direction:column;align-items:flex-start}.retail-dialog{max-height:94vh;border-radius:18px}}
-</style>
 </head>
 <body>
 
@@ -1106,7 +1101,7 @@ header{
           <strong>Rp 199rb/bln</strong>
         </div>
         <div class="product-actions">
-          <button type="button" class="btn btn-primary btn-sm retail-detail-btn" data-retail-detail>Lihat Detail</button>
+          <a href="RetailPro-Landing-Page.html" class="btn btn-primary btn-sm">Lihat Detail</a>
           <a href="#kontak" class="btn btn-ghost btn-sm">Tanya Admin</a>
         </div>
       </div>
@@ -1703,55 +1698,5 @@ window.addEventListener('scroll', () => {
   header.style.boxShadow = window.scrollY > 8 ? '0 8px 24px rgba(15,23,42,.06)' : 'none';
 }, { passive: true });
 </script>
-
-<!-- ===== DETAIL APLIKASI RETAIL ===== -->
-<div class="retail-modal" id="retailModal" aria-hidden="true">
-  <div class="retail-dialog" role="dialog" aria-modal="true" aria-labelledby="retailModalTitle">
-    <button class="retail-close" type="button" data-retail-close aria-label="Tutup">×</button>
-    <div class="retail-detail-hero">
-      <div>
-        <span class="retail-badge">OPERASIONAL • BEST SELLER</span>
-        <h2 id="retailModalTitle">Aplikasi Retail untuk Toko yang <span>Lebih Teratur</span></h2>
-        <p>Kelola penjualan, stok, produk, pelanggan, dan laporan toko dalam satu aplikasi. Cocok untuk toko retail, minimarket, warung, dan bisnis yang sedang berkembang.</p>
-        <div class="retail-price"><strong>Rp 199rb/bln</strong><del>Rp 249rb/bln</del></div>
-        <a href="#kontak" class="btn btn-primary" data-retail-contact>Hubungi Admin →</a>
-      </div>
-      <div class="retail-preview">
-        <div class="retail-preview-top"><i></i><i></i><i></i></div>
-        <div class="retail-preview-body">
-          <div class="retail-preview-title"><b>Dashboard Retail</b><span class="retail-badge">ONLINE</span></div>
-          <div class="retail-preview-grid">
-            <div class="retail-stat"><small>Penjualan</small><b>Rp 4,85 jt</b></div>
-            <div class="retail-stat"><small>Transaksi</small><b>128</b></div>
-            <div class="retail-stat"><small>Produk</small><b>1.248</b></div>
-          </div>
-          <div class="retail-bars"><i style="height:35%"></i><i style="height:55%"></i><i style="height:43%"></i><i style="height:72%"></i><i style="height:58%"></i><i style="height:88%"></i><i style="height:76%"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="retail-detail-content">
-      <h3>Fitur Utama</h3>
-      <p>Fitur penting untuk membantu operasional toko sehari-hari.</p>
-      <div class="retail-feature-grid">
-        <div class="retail-feature"><div class="ri">🛒</div><h4>Point of Sales</h4><p>Transaksi kasir cepat dengan perhitungan total dan kembalian otomatis.</p></div>
-        <div class="retail-feature"><div class="ri">📦</div><h4>Manajemen Stok</h4><p>Pantau stok masuk, stok keluar, dan ketersediaan produk.</p></div>
-        <div class="retail-feature"><div class="ri">📊</div><h4>Laporan Penjualan</h4><p>Lihat ringkasan penjualan untuk membantu mengambil keputusan bisnis.</p></div>
-        <div class="retail-feature"><div class="ri">🏷️</div><h4>Produk & Harga</h4><p>Kelola katalog, kategori, harga jual, dan informasi produk.</p></div>
-        <div class="retail-feature"><div class="ri">👥</div><h4>Pelanggan</h4><p>Simpan data pelanggan dan bangun program loyalitas toko.</p></div>
-        <div class="retail-feature"><div class="ri">🧾</div><h4>Nota Transaksi</h4><p>Buat transaksi dengan bukti pembayaran yang rapi dan mudah dibagikan.</p></div>
-      </div>
-      <div class="retail-module">
-        <h3>Yang Anda Dapatkan</h3>
-        <ul class="retail-checks">
-          <li>Dashboard penjualan toko</li><li>Manajemen produk dan kategori</li>
-          <li>Kontrol stok lebih mudah</li><li>Riwayat transaksi</li>
-          <li>Data pelanggan dan supplier</li><li>Laporan bisnis berkala</li>
-        </ul>
-      </div>
-    </div>
-    <div class="retail-detail-footer"><p>Ingin menyesuaikan fitur dengan kebutuhan toko Anda?</p><a href="#kontak" class="btn btn-primary" data-retail-contact>Konsultasi Sekarang</a></div>
-  </div>
-</div>
-
 </body>
 </html>
