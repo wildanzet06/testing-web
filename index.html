@@ -443,7 +443,7 @@
     .slider-btn{width:36px;height:36px;font-size:22px}
     .hero-slide{height:260px}
     .hero-slide-inner{padding:16px;flex-direction:column;align-items:flex-start;justify-content:flex-end}
-    .hero-slide-card{width:min(100%,230px)}
+    .hero-slide-card{width:min(100%,px)}
     .hero-slide-badges{max-width:100%;width:100%}
     .hero-slide-badge{font-size:11.5px;padding:8px 10px}
     .cards{grid-template-columns:1fr}
@@ -487,6 +487,305 @@
     .cta-band p{font-size:15px}
     .foot-bottom{font-size:12.8px}
   }
+
+/* ================= MODERN UI REFRESH ================= */
+:root{
+  --modern-glass:rgba(255,255,255,.72);
+  --modern-shadow:0 24px 70px rgba(15,23,42,.12);
+}
+
+/* Softer overall visual language */
+body{
+  background:
+    radial-gradient(circle at 50% -10%, rgba(99,102,241,.08), transparent 34rem),
+    var(--bg);
+}
+header{
+  background:rgba(255,255,255,.76);
+  box-shadow:0 1px 0 rgba(15,23,42,.04);
+}
+.logo-mark{
+  border-radius:50%;
+}
+.btn{
+  box-shadow:0 8px 22px rgba(15,23,42,.06);
+}
+.btn-primary{
+  box-shadow:0 12px 28px rgba(79,70,229,.25);
+}
+
+/* Hero: more premium, especially on phones */
+.hero{
+  padding-top:82px;
+  padding-bottom:76px;
+}
+.hero::before{
+  height:760px;
+  background:
+    radial-gradient(520px 300px at 20% 18%, rgba(79,70,229,.20), transparent 70%),
+    radial-gradient(500px 300px at 84% 22%, rgba(6,182,212,.18), transparent 68%),
+    radial-gradient(420px 260px at 50% 78%, rgba(139,92,246,.10), transparent 72%);
+}
+.hero h1{
+  max-width:850px;
+  margin:0 auto;
+  text-wrap:balance;
+}
+.hero .lead{
+  max-width:700px;
+}
+.hero-slider{
+  max-width:1040px;
+  margin:40px auto 0;
+  padding:10px;
+  border-radius:30px;
+  background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(239,246,255,.62));
+  box-shadow:var(--modern-shadow);
+  border:1px solid rgba(255,255,255,.9);
+}
+.hero-slider-frame{
+  border-radius:24px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);
+}
+.hero-slide{
+  height:350px;
+}
+.hero-slide-card{
+  border-radius:20px;
+  padding:10px 12px;
+  background:transparent;
+  border-color:rgba(255,255,255,.32);
+  box-shadow:none;
+}
+.hero-slide-badge{
+  border-radius:999px;
+  background:transparent;
+  border-color:rgba(255,255,255,.32);
+  padding:6px 9px;
+  font-size:11px;
+  backdrop-filter:none;
+}
+.hero-slider-dots{
+  padding-top:12px;
+}
+
+/* "Powered by" + "Dipercaya..." become circular logo bubbles */
+.client-strip{
+  padding-top:24px;
+  padding-bottom:34px;
+}
+.client-strip .logos{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+}
+.client-strip .logos span{
+  width:92px;
+  height:92px;
+  min-width:92px !important;
+  flex:0 0 92px !important;
+  padding:10px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  line-height:1.15;
+  font-size:12px;
+  background:linear-gradient(145deg,#fff,#f1f5f9);
+  border:1px solid rgba(148,163,184,.22);
+  box-shadow:0 12px 28px rgba(15,23,42,.08);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.client-strip .logos span:hover{
+  transform:translateY(-5px) scale(1.04);
+  box-shadow:0 18px 36px rgba(79,70,229,.14);
+}
+.client-strip p{
+  margin-bottom:18px;
+}
+
+/* More depth in cards and panels */
+.card,.panel,.contact,.stat-grid,.faq-item{
+  box-shadow:0 12px 35px rgba(15,23,42,.07);
+}
+.card:hover{
+  box-shadow:0 22px 50px rgba(15,23,42,.12);
+}
+.ic{
+  border-radius:50%;
+}
+
+/* Mobile-first polish */
+@media (max-width:720px){
+  .hero{
+    padding:34px 0 48px;
+  }
+  .hero::before{
+    height:620px;
+    inset:-12% -35% auto -35%;
+    background:
+      radial-gradient(320px 240px at 25% 18%, rgba(79,70,229,.22), transparent 70%),
+      radial-gradient(320px 230px at 80% 30%, rgba(6,182,212,.18), transparent 70%);
+  }
+  .hero h1{
+    font-size:clamp(33px,11vw,46px);
+    line-height:1.02;
+    letter-spacing:-.045em;
+  }
+  .hero .lead{
+    font-size:15.5px;
+    line-height:1.65;
+    max-width:390px;
+  }
+  .cta-row{
+    gap:10px;
+  }
+  .cta-row .btn{
+    min-height:50px;
+    border-radius:16px;
+  }
+  .fine{
+    margin-top:15px;
+  }
+
+  .hero-slider{
+    margin-top:28px;
+    padding:7px;
+    border-radius:24px;
+  }
+  .hero-slider-frame{
+    border-radius:19px;
+  }
+  .hero-slide{
+    height:390px;
+    background-position:center;
+  }
+  .hero-slide::before{
+    background:
+      linear-gradient(180deg,rgba(15,23,42,.04) 10%,rgba(15,23,42,.10) 38%,rgba(15,23,42,.72) 100%);
+  }
+  .hero-slide-inner{
+    padding:15px;
+    gap:12px;
+    justify-content:flex-end;
+  }
+  .hero-slide-card{
+    width:auto;
+    max-width:180px;
+    padding:10px 12px;
+    border-radius:13px;
+  }
+  .hero-slide-card .value{
+    font-size:22px;
+  }
+  .hero-slide-badges{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    width:100%;
+    max-width:none;
+    gap:7px;
+  }
+  .hero-slide-badge{
+    min-width:0;
+    padding:6px 8px;
+    border-radius:12px;
+    font-size:10px;
+    justify-content:center;
+    text-align:center;
+  }
+  .hero-slide-badge:last-child{
+    grid-column:1 / -1;
+  }
+  .hero-slider-controls{
+    top:10px;
+    right:10px;
+  }
+  .slider-btn{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+  }
+
+  .client-strip{
+    padding:18px 0 30px;
+  }
+  .client-strip p{
+    font-size:10.5px;
+    letter-spacing:.12em;
+    margin-bottom:17px;
+  }
+  .client-strip .logos{
+    gap:10px;
+  }
+  .client-strip .logos span{
+    width:72px;
+    height:72px;
+    min-width:72px !important;
+    flex:0 0 72px !important;
+    font-size:10px;
+    padding:7px;
+  }
+
+  .stats{
+    padding-top:35px;
+  }
+  .stat-grid{
+    border-radius:20px;
+  }
+  .stat{
+    padding:19px 10px;
+  }
+  .stat .num{
+    font-size:27px;
+  }
+  .stat .lbl{
+    font-size:11.5px;
+  }
+}
+
+@media (max-width:480px){
+  .wrap{
+    padding-left:14px;
+    padding-right:14px;
+  }
+  .hero{
+    padding-top:28px;
+  }
+  .hero h1{
+    font-size:36px;
+  }
+  .hero .lead{
+    font-size:14.5px;
+  }
+  .hero-slide{
+    height:365px;
+  }
+  .hero-slide-card .value{
+    font-size:24px;
+  }
+  .client-strip .logos{
+    gap:9px;
+  }
+  .client-strip .logos span{
+    width:68px;
+    height:68px;
+    min-width:68px !important;
+    flex-basis:68px !important;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto !important;
+    transition-duration:.01ms !important;
+    animation-duration:.01ms !important;
+  }
+}
+
 </style>
 </head>
 <body>
